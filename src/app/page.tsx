@@ -1,17 +1,18 @@
 import Image from "next/image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Check, Star } from "lucide-react";
+import Phone from "@/components/Phone";
 
 export default function Home() {
   return (
-    <div className="bg-slate-50 text-black bg-white">
+    <div className="bg-slate-50 text-black">
 		<section>
 			<MaxWidthWrapper className="pb-24 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 
 			xl:gap-x-8 lg:pt-24 xl:pt-32 lg:pb-52">
 				<div className="col-span-2 px-6 lg:px-0 lg:pt-4">
 					<div className="relative mx-auto text-center lg:text-left flex flex-col items-center
 					lg:items-start">
-						<div className="absolute w-28 left-0 -top-0 hidden lg:block">
+						<div className="absolute w-28 left-0 -top-20 hidden lg:block">
 							<img src="/snake-1.png" className="w-full"></img>
 						</div>
 						<h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold 
@@ -88,6 +89,16 @@ export default function Home() {
 
 							<p><span className="font-semibold">1,250</span> Happy Customers</p>
 						</div>
+					</div>
+				</div>
+
+				<div className="col-span-full lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mx-0
+				lg:mt-20 h-fit">
+					<div className="relative md:max-w-xl">
+						<img src='/your-image.png' className="absolute w-40 lg:w-52 left-56 -top-20 select-none hidden 
+						sm:block lg:hidden xl:block"/>
+						<img src="/line.png" className="absolute w-20 -left-6 -bottom-6 select-none"></img>
+						<Phone className="w-64" imgSrc="/testimonials/1.jpg" />
 					</div>
 				</div>
 			</MaxWidthWrapper>
