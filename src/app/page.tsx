@@ -2,6 +2,7 @@ import Image from "next/image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Check, Star } from "lucide-react";
 import Phone from "@/components/Phone";
+import { Icons } from "@/components/icons";
 
 export default function Home() {
   return (
@@ -110,8 +111,26 @@ export default function Home() {
 				<div className="flex flex-col lg:flex-row items-center gap-3 sm:gap-6">
 					<h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-5xl
 					md:text-6xl text-gray-900">
-						What our customers say
+						What our 
+						<span className="relative px-2">
+							customers
+							<Icons.underline className="hidden sm:block pointer-events-none absolute inset-x-0 -bottom-8 text-green-500"/>
+						</span> 
+						say
 					</h2>
+					<img src="/snake-2.png" className="w-24 order-0 lg:order-2"/>
+				</div>
+
+				<div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16">
+					<div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
+						<div className="flex gap-0.5 mb-2">
+							<Star className="h-5 w-5 text-green-600 fill-green-600" />
+							<Star className="h-5 w-5 text-green-600 fill-green-600" />
+							<Star className="h-5 w-5 text-green-600 fill-green-600" />
+							<Star className="h-5 w-5 text-green-600 fill-green-600" />
+							<Star className="h-5 w-5 text-green-600 fill-green-600" />
+						</div>
+					</div>
 				</div>
 			</MaxWidthWrapper>
 		</section>
